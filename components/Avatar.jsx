@@ -6,9 +6,9 @@ const Avatar = () => {
       <Image
         src="/dodi.png"
         alt ="dodi"
-        width={737}
-        height={678}
-        className="translate-z-0 w-full h-full ml-10 mt-10"
+        width={600}
+        height={550}
+        className="translate-z-0 w-full h-full ml-24 mt-20"
       />
     </div>
   );
