@@ -94,12 +94,7 @@ export const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
 
-  return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
 
-      >
-        <Avatar />
-      </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
