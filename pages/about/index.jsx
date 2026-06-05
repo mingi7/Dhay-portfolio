@@ -16,7 +16,6 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 
-import Avatar from "../../components/Avatar";
 import { fadeIn } from "../../variants";
 
 //  data
