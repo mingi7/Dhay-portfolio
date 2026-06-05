@@ -17,7 +17,6 @@ import {
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
-import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 
 //  data
@@ -97,7 +96,6 @@ const About = () => {
 
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
-      <Circles />
 
       {/* avatar img */}
       <motion.div
