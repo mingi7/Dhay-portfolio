@@ -1,12 +1,9 @@
-'use client'; // هذا السطر يحل 90% من مشاكل Vercel
-
-import { useState } from "react";
-// ... باقي الاستيراداتimport { useState } from "react";
 import { Sora } from "next/font/google";
 import Head from "next/head";
 import Header from "../components/Header";
+import Nav from "../components/Nav";
+import TopLeftImg from "../components/TopLeftImg";
 
-// إعداد الخط
 const sora = Sora({
   subsets: ["latin"],
   variable: "--font-sora",
@@ -14,19 +11,14 @@ const sora = Sora({
 });
 
 const Layout = ({ children }) => {
-  // حالة التحكم بالثيم (الوضع)
-  const [theme, setTheme] = useState('dark');
-
   return (
-    <main className={`page ${theme === 'light' ? 'bg-site-light' : 'bg-site-dark'} text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative transition-all duration-500`}>
+    <main className={`page text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
         <title>Dhay ALzaidi | Portfolio</title>
       </Head>
-
-      {/* نمرر دالة التبديل للهيدر عشان يتحكم في الـ State */}
-      <Header toggleTheme={setTheme} />
-
-      {/* المحتوى */}
+      <TopLeftImg />
+      <Nav />
+      <Header />
       {children}
     </main>
   );
