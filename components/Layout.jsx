@@ -1,4 +1,7 @@
+'use client'; // هذا السطر يحل 90% من مشاكل Vercel
+
 import { useState } from "react";
+// ... باقي الاستيراداتimport { useState } from "react";
 import { Sora } from "next/font/google";
 import Head from "next/head";
 import Header from "../components/Header";
