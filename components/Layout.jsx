@@ -1,11 +1,9 @@
+import { useState } from "react";
 import { Sora } from "next/font/google";
 import Head from "next/head";
-
 import Header from "../components/Header";
-import Nav from "../components/Nav";
-import TopLeftImg from "../components/TopLeftImg";
 
-// setup font
+// إعداد الخط
 const sora = Sora({
   subsets: ["latin"],
   variable: "--font-sora",
@@ -13,40 +11,22 @@ const sora = Sora({
 });
 
 const Layout = ({ children }) => {
+  // حالة التحكم بالثيم (الوضع)
+  const [theme, setTheme] = useState('dark');
+
   return (
-    <main
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
-    >
-      {/* metadata */}
+    <main className={`page ${theme === 'light' ? 'bg-site-light' : 'bg-site-dark'} text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative transition-all duration-500`}>
       <Head>
         <title>Dhay ALzaidi | Portfolio</title>
-        <meta
-          name="description"
-          content="Dhay ALzaidi is a Full-stack web developer with 10+ years of experience."
-        />
-        <meta
-          name="keywords"
-          content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
-        />
-        <meta name="author" content="Sanidhya Kumar Verma" />
-        <meta name="theme-color" content="#4270d3" />
       </Head>
 
-      <TopLeftImg />
-      <Nav />
-      <Header />
+      {/* نمرر دالة التبديل للهيدر عشان يتحكم في الـ State */}
+      <Header toggleTheme={setTheme} />
 
-      {/* main content */}
+      {/* المحتوى */}
       {children}
     </main>
   );
 };
-// تأكدي من إضافة useState للتحكم بالخلفية هنا إذا لم يكن موجوداً
-const Layout = ({ children }) => {
-  return (
-    <div className={`page transition-all duration-500 ${typeof window !== 'undefined' && document.body.className === 'light-mode' ? 'bg-site-light' : 'bg-site-dark'}`}>
-      {children}
-    </div>
-  );
-};
+
 export default Layout;
