@@ -60,3 +60,25 @@
   background-color: #0f172a; /* كحلي غامق لليل */
   transition: 0.5s;
 }
+
+/* النصوص في وضع النهار */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000; /* نص أسود */
+  transition: 0.5s;
+}
+
+.light-mode h1, .light-mode h2, .light-mode p, .light-mode div {
+  color: #000000 !important; /* إجبار النصوص على اللون الأسود */
+}
+
+/* النصوص في وضع الليل */
+.dark-mode {
+  background-color: #0f172a;
+  color: #ffffff; /* نص أبيض */
+  transition: 0.5s;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode div {
+  color: #ffffff !important; /* إجبار النصوص على اللون الأبيض */
+}
