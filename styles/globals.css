@@ -49,3 +49,14 @@
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
 }
+
+/* تنسيقات التبديل بين النهار والليل */
+.light-mode {
+  background-color: #ffffff; /* أبيض للنهار */
+  transition: 0.5s;
+}
+
+.dark-mode {
+  background-color: #0f172a; /* كحلي غامق لليل */
+  transition: 0.5s;
+}
