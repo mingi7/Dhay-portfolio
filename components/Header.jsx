@@ -37,7 +37,7 @@ const Header = () => {
   </button>
 </div>
 
-          <Socials />
+          
         </div>
       </div>
     </header>
