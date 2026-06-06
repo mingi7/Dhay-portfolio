@@ -82,3 +82,28 @@
 .dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode div {
   color: #ffffff !important; /* إجبار النصوص على اللون الأبيض */
 }
+
+/* الوضع النهاري */
+.light-mode {
+  background-image: url('/light.PNG'); 
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+/* الوضع الليلي */
+.dark-mode {
+  background-image: url('/dark.PNG'); 
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+/* الألوان للنصوص */
+.light-mode, .light-mode h1, .light-mode h2, .light-mode p, .light-mode div {
+  color: #0f172a !important;
+}
+
+.dark-mode, .dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode div {
+  color: #ffffff !important;
+}
