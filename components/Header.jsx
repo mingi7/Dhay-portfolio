@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Link from "next/link";
-import Socials from "../components/Socials";
 
 const Header = () => {
   const [isDark, setIsDark] = useState(true);
@@ -26,6 +25,17 @@ const Header = () => {
           <button onClick={toggleTheme} className="text-2xl">
             {isDark ? "☀️" : "🌙"}
           </button>
+
+          {/* الإطار الجانبي للشمس والقمر */}
+<div className="fixed right-4 top-[30%] flex flex-col items-center gap-y-4 bg-white/10 backdrop-blur-sm p-3 rounded-full border border-white/20">
+  <button onClick={() => document.body.className = 'light-mode'} className="text-2xl hover:scale-110 transition-all">
+    ☀️
+  </button>
+  <div className="w-6 h-[1px] bg-white/30"></div> {/* خط فاصل بسيط */}
+  <button onClick={() => document.body.className = 'dark-mode'} className="text-2xl hover:scale-110 transition-all">
+    🌙
+  </button>
+</div>
 
           <Socials />
         </div>
