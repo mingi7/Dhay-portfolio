@@ -41,5 +41,12 @@ const Layout = ({ children }) => {
     </main>
   );
 };
-
+// تأكدي من إضافة useState للتحكم بالخلفية هنا إذا لم يكن موجوداً
+const Layout = ({ children }) => {
+  return (
+    <div className={`page transition-all duration-500 ${typeof window !== 'undefined' && document.body.className === 'light-mode' ? 'bg-site-light' : 'bg-site-dark'}`}>
+      {children}
+    </div>
+  );
+};
 export default Layout;
