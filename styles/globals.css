@@ -44,6 +44,28 @@
     --bg-image: url('/light.png');
   }
 
+  /* الخط العربي لما تكون اللغة عربي */
+  html[lang='ar'] body,
+  html[lang='ar'] h1,
+  html[lang='ar'] h2,
+  html[lang='ar'] h3,
+  html[lang='ar'] p,
+  html[lang='ar'] button,
+  html[lang='ar'] a {
+    font-family: var(--font-cairo), sans-serif;
+  }
+
+  /* الخط الإنجليزي لما تكون اللغة إنجليزي */
+  html[lang='en'] body,
+  html[lang='en'] h1,
+  html[lang='en'] h2,
+  html[lang='en'] h3,
+  html[lang='en'] p,
+  html[lang='en'] button,
+  html[lang='en'] a {
+    font-family: var(--font-sora), sans-serif;
+  }
+
   .page {
     @apply w-full h-screen overflow-hidden;
   }
