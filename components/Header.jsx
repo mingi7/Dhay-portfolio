@@ -5,9 +5,12 @@ import Link from "next/link";
 const Header = () => {
   const [theme, setTheme] = useState('dark');
 
-  // يتم تغيير كلاس الـ body فور تغير الحالة
   useEffect(() => {
-    document.body.className = theme === 'light' ? 'light-mode' : 'dark-mode';
+    if (theme === 'light') {
+      document.documentElement.classList.add('light');
+    } else {
+      document.documentElement.classList.remove('light');
+    }
   }, [theme]);
 
   return (

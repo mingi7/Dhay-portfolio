@@ -12,7 +12,10 @@ const sora = Sora({
 
 const Layout = ({ children }) => {
   return (
-    <main className={`page text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
+    <main
+      className={`page text-white bg-cover bg-center bg-no-repeat ${sora.variable} font-sora relative`}
+      style={{ backgroundImage: "var(--bg-image, url('/dark.png'))" }}
+    >
       <Head>
         <title>Dhay ALzaidi | Portfolio</title>
       </Head>

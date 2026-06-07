@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,7 +21,7 @@ module.exports = {
       colors: {
         primary: "#131424",
         secondary: "#393A47",
-        accent: "#406fd4", // اللون الأزرق الجديد
+        accent: "#406fd4",
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',

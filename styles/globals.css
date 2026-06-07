@@ -21,7 +21,29 @@
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
+    background-image: url('/dark.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
   }
+
+  html.light body {
+    background-image: url('/light.png');
+    color: #000000;
+  }
+
+  html.light h1,
+  html.light h2,
+  html.light h3,
+  html.light p {
+    color: #000000 !important;
+  }
+
+  html.light main {
+    --bg-image: url('/light.png');
+  }
+
   .page {
     @apply w-full h-screen overflow-hidden;
   }
@@ -48,42 +70,4 @@
   .textarea {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
-}
-
-/* تنسيقات التبديل بين النهار والليل */
-
-.light-mode {
-  background-image: url('/light.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #000000;
-  transition: all 0.5s ease;
-}
-
-.light-mode h1,
-.light-mode h2,
-.light-mode h3,
-.light-mode p,
-.light-mode div,
-.light-mode span {
-  color: #000000 !important;
-}
-
-.dark-mode {
-  background-image: url('/dark.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode p,
-.dark-mode div,
-.dark-mode span {
-  color: #ffffff !important;
 }
