@@ -1,11 +1,10 @@
 import { useCallback } from "react";
-import { Particles } from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 const ParticlesContainer = () => {
-  // init
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(async () => {}, []);
@@ -63,7 +62,7 @@ const ParticlesContainer = () => {
           move: {
             direction: "none",
             enable: true,
-            outMode: {
+            outModes: {
               default: "bounce",
             },
             random: false,
