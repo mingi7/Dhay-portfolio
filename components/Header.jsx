@@ -33,9 +33,19 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* أزرار التبديل */}
           <div className="fixed right-4 top-[30%] flex flex-col items-center gap-y-4 bg-white/10 backdrop-blur-sm p-3 rounded-full border border-white/20 z-50">
-            {/* زر الثيم */}
             <button onClick={() => setTheme('light')} className="text-2xl hover:scale-110 transition-all">☀️</button>
             <div className="w-6 h-[1px] bg-white/30"></div>
-            <button onClick={() => setTheme('dark')} className="
+            <button onClick={() => setTheme('dark')} className="text-2xl hover:scale-110 transition-all">🌙</button>
+            <div className="w-6 h-[1px] bg-white/30"></div>
+            <button onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')} className="text-sm font-bold text-white hover:text-accent hover:scale-110 transition-all">
+              {lang === 'ar' ? 'EN' : 'ع'}
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
