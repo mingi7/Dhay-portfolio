@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         primary: "#131424",
         secondary: "#393A47",
-        accent: "#4270d3", // اللون الأزرق الجديد
+        accent: "#406fd4", // اللون الأزرق الجديد
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
