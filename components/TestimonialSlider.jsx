@@ -1,8 +1,13 @@
+'use client'; // ضروري للمكونات التفاعلية
+
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
-import { Navigation, Pagination } from "swiper";
+
+// التعديل هنا: الاستيراد من swiper/modules
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// استيراد ملفات الـ CSS
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -34,7 +39,7 @@ const testimonialData = [
 const TestimonialSlider = () => {
   return (
     <Swiper
-      navigation
+      navigation={true}
       pagination={{
         clickable: true,
       }}
@@ -73,7 +78,7 @@ const TestimonialSlider = () => {
               <div className="mb-4">
                 <FaQuoteLeft
                   className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"
-                  aria-aria-hidden
+                  aria-hidden="true"
                 />
               </div>
 

@@ -1,3 +1,5 @@
+'use client'; // مهم جداً لأننا نستخدم Swiper
+
 import {
   RxCrop,
   RxPencil2,
@@ -6,9 +8,12 @@ import {
   RxRocket,
   RxArrowTopRight,
 } from "react-icons/rx";
-import { FreeMode, Pagination } from "swiper";
+
+// التعديل هنا: الاستيراد من swiper/modules
+import { FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// استيراد ملفات الـ CSS
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -58,7 +63,7 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      freeMode
+      freeMode={true} // التأكد من كتابتها كخاصية boolean
       className="h-[240px] sm:h-[340px]"
     >
       {serviceData.map((item, i) => (
